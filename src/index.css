@@ -1,0 +1,31 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: Oldschool-Grotesk;
+  font-weight: 800;
+  src: url('../public/font/OldschoolGrotesk-NormalExtraBold.otf');
+}
+@font-face {
+  font-family: Oldschool-Grotesk;
+  font-weight: 500;
+  src: url('../public/font/OldschoolGrotesk-NormalMedium.otf');
+}
+
+@theme {
+  --font-oldschol: "Oldschool-Grotesk", sans-serif; 
+  --font-supply: "Supply", sans-serif; 
+  --font-neue: "Neue Montreal", sans-serif; 
+  --color-primary:#F56C10;
+  --color-secondary:#FEF8F2;
+  --text-headings : 160px;
+  --text-paragraphe : 16px;
+  --text-supply : 14px;
+  --spacing-margin: 64px;
+  --spacing-space-bottom : 150px;
+  --spacing-text-bottom : 40px;
+  --text-smallheadings : 80px;
+  --text-smallparagraphe : 16px;
+  --spacing-smallmargin: 30px;
+  --spacing-smallspace-bottom : 120px;
+  --spacing-smalltext-bottom : 20px
+}
