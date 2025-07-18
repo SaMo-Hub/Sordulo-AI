@@ -1,11 +1,11 @@
 import React from 'react'
 
-export const Button = ({text}) => {
+export const Button = ({ text,secondary }) => {
   return (
-    <button className='px-4 bg-primary border-2 font-oldschol rounded-full'> 
-        <div>
-        {text} 
-        </div>
-        </button>
+    <button className={` ${secondary ? 'bg-white' : ' bg-primary '} h-fit relative hover:left-[2px] hover:top-[2px] w-fit px-4 py-2 font-bold lg:text-xl border-3 border-black font-oldschol rounded-full shadow-[4px_3px_0_0_black] lg:shadow-[7px_5px_0_0_black] hover:shadow-[4px_3px_0_0_black] cursor-pointer`}>
+      <div>
+        {text}
+      </div>
+    </button>
   )
 }
