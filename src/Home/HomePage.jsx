@@ -7,14 +7,24 @@ import { Header } from './Header'
 import { ConcentrerDePuissance } from './ConcentrerDePuissance'
 import { CeQueLesClients } from './CeQueLesClients'
 import { Navbar } from '../components/Navbar'
+import { Faq } from './Faq'
+import { ConcuePourReserver } from './ConcuePourReserver'
+import { LeSeulOutilDIA } from './LeSeulOutilDIA'
+import { AgenciesVsOurSolution } from './AgenciesVsOurSolution'
+import { Footer } from './Footer'
 export const HomePage = ({  }) => {
   return (
-    <div className={`font-oldschol mt-32`}>
+    <div className={`font-oldschol mt-12`}>
 
       {/* <Navbar/> */}
       <Header/>
       <CeQueLesClients/>
       <ConcentrerDePuissance/>
+      <ConcuePourReserver/>
+      <LeSeulOutilDIA/>
+      <AgenciesVsOurSolution/>
+      <Faq/>
+      <Footer/>
     
      
     </div>

@@ -6,7 +6,7 @@ import review from '/img/Home/review.png'
 export const CeQueLesClients = () => {
   return (
   <section className={`bg-primary px-4 md:px-24 py-12 md:py-38`}>
-        <h2 className={`font-oldschol font-bold px-4 text-[24px] leading-[90%] sm:text-[34px] lg:text-[64px] text-center`}>
+        <h2 className={`font-oldschol font-bold px-4 text-[24px] md:text-[52px]  leading-[90%] sm:text-[34px] lg:text-[64px] text-center`}>
           Une vue d'ensemble de ce <br />que les clients disent de <br /> votre entreprise.
         </h2>
         <div className='mt-28'>

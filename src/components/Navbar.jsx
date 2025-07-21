@@ -8,10 +8,10 @@ export const Navbar = () => {
         <img src="/logo.svg" alt="" />
         <div>
             <ul className='flex g'>
-                <li className='hover:bg-white/20 px-3 py-1.5 rounded-full'>Tarifs</li>
-                 <li className='hover:bg-white/20 px-3 py-1.5 rounded-full'>Fonctionnalités</li>
-                 <li className='hover:bg-white/20 px-3 py-1.5 rounded-full'>Secteur</li>
-                <li className='hover:bg-white/20 px-3 py-1.5 rounded-full'>Ressources</li>
+                <li className='hover:bg-white/20 px-3 py-1 rounded-full'>Tarifs</li>
+                 <li className='hover:bg-white/20 px-3 py-1 rounded-full'>Fonctionnalités</li>
+                 <li className='hover:bg-white/20 px-3 py-1 rounded-full'>Secteur</li>
+                <li className='hover:bg-white/20 px-3 py-1 rounded-full'>Ressources</li>
             </ul>
              </div>
         </div>
