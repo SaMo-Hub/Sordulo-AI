@@ -14,14 +14,14 @@ import { AgenciesVsOurSolution } from './AgenciesVsOurSolution'
 import { Footer } from './Footer'
 export const HomePage = ({  }) => {
   return (
-    <div className={`font-oldschol mt-12`}>
+    <div className={`bg-[#ffeee7] font-oldschol mt-12`}>
 
       {/* <Navbar/> */}
       <Header/>
       <CeQueLesClients/>
       <ConcentrerDePuissance/>
-      <ConcuePourReserver/>
       <LeSeulOutilDIA/>
+      <ConcuePourReserver/>
       <AgenciesVsOurSolution/>
       <Faq/>
       <Footer/>
