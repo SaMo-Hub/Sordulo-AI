@@ -33,9 +33,9 @@ export const AgenciesVsOurSolution = () => {
     <section
       className={`bg-primary-50 flex-col flex items-center justify-center gap-12  px-4 md:px-24 py-12 md:py-38`}
     >
-      <div>
+      <div className="flex flex-col items-center justify-center ">
 
-      <Subtitle number={5} text={"Agencies Vs Our Solution"} />
+      <Subtitle number={6} text={"Agencies Vs Our Solution"} />
       <h2
         className={`font-oldschol font-bold px-4 text-[24px] md:text-[52px]  leading-[90%] sm:text-[34px] lg:text-[64px] text-center`}
         >

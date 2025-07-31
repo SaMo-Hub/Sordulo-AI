@@ -100,7 +100,7 @@ export const Faq = () => {
 
   return (
     <section className="flex flex-col bg- items-center gap-32 px-4 md:px-24 py-12 md:py-38">
-      <div>
+      <div className="flex flex-col items-center justify-center">
 <Subtitle number={6} text={"Frequently Asked Questions"} />
       <h2 className="font-oldschol font-bold px-4 text-[24px] leading-[90%] sm:text-[34px] md:text-[52px] lg:text-[64px] text-center">
         Most Common <br /> Questions
