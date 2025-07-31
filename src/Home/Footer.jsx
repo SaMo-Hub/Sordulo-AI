@@ -19,31 +19,31 @@ export const Footer = () => {
   return (
     <footer className='bg-primary pt-42 overflow-hidden'>
       <div className='flex relative top-6 items-end w-full'>
-        <p className='text-white tracking-[-0.045em] font-bold font-oldschol text-[30.2vw] '>
-          <span>
+        <div className='text-white flex tracking-[-0.045em] font-bold font-oldschol text-[30.2vw] '>
+          <p className='hover:translate-y-[-50px] transition-all '>
             s
-          </span>
-          <span className='tracking-[-0.06em] '>
+          </p>
+          <p className='hover:translate-y-[-50px] transition-all tracking-[-0.06em] '>
             o
-          </span>
-          <span className='tracking-[-0.045em] '>
+          </p>
+          <p className='hover:translate-y-[-50px] transition-all tracking-[-0.045em] '>
             r
-          </span>
-          <span className='tracking-[-0.08em] '>
+          </p>
+          <p className='hover:translate-y-[-50px] transition-all tracking-[-0.08em] '>
             d
-          </span>
-          <span className='tracking-[-0.08em] '>
+          </p>
+          <p className='hover:translate-y-[-50px] transition-all tracking-[-0.08em] '>
             u
-          </span>
-          <span className='tracking-[-0.06em] '>
+          </p>
+          <p className='hover:translate-y-[-50px] transition-all tracking-[-0.06em] '>
             l
-          </span>
-          <span>
+          </p>
+          <p>
             o
-          </span>
-        </p>
+          </p>
+        </div>
         {/* {footerImages.map((img, idx) => (
-          <img className='w-[100] duration-300   hover:-translate-y-20 transition-all' src={img} alt={`footer-letter-${idx}`} key={idx} />
+          <img className='w-[100] duration-300   hover:-translate-y-50 transition-all' src={img} alt={`footer-letter-${idx}`} key={idx} />
         ))} */}
       </div>
     </footer>

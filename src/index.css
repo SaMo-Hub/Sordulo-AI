@@ -15,8 +15,10 @@
   --font-oldschol: "Oldschool-Grotesk", sans-serif; 
   --font-supply: "Supply", sans-serif; 
   --font-neue: "Neue Montreal", sans-serif; 
-  --color-primary:#F56C10;
-  --color-secondary:#FEF8F2;
+  --color-primary:#F5B810;
+  --color-primary-50:#FDE192;
+  --color-secondary:#3649A6;
+  --color-dark:#151B37;
   --text-headings : 160px;
   --text-paragraphe : 16px;
   --text-supply : 14px;

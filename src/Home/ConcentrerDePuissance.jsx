@@ -3,15 +3,17 @@ import { Button } from '../components/Button'
 import { MultiBouton } from '../components/MultiBouton'
 
 export const ConcentrerDePuissance = () => {
-    const boutonList = ["Liens magique", "Liens magiques"];
+    const boutonList = ["Répondre avec l’IA", "Planificateur IA"];
     const [isBoutonSelected, setIsBoutonSelected] = useState(boutonList[0]);
   return (
- <section className='p-4 py-12 md:py-38'>
+    
+    <section className='p-4 md:p-12'>
+      <div className="w-fit bg-white  md:px-24 py-12 md:py-24  pt-10  rounded-lg ">
         <div className='flex flex-col items-center justify-center'>
          <h2 className={`font-oldschol font-bold px-4 text-[24px] leading-[90%] sm:text-[34px] md:text-[52px]  lg:text-[64px] text-center`}>
             Un concentré <br /> de puissance
         </h2>
-        <p className='text-sm md:text-base mt-4 w-[80%] md:md:w-2/6  text-center'>
+        <p className='text-sm md:text-base mt-4 w-[80%] md:md:w-2/3 xl:w-2/6  text-center'>
           On s'occupe des tâches ennuyeuses. Vous vous concentrez sur l'augmentation de la visibilité et de la crédibilité de votre marque
         </p>
         </div>
@@ -61,11 +63,13 @@ export const ConcentrerDePuissance = () => {
 
           
           
-          <p className='text-center md:w-2/5'>
+          <p className='text-center w-[80%] xl:w-2/5'>
             Faites un suivi instantané des demandes NPS et CSAT avec une demande d'avis et augmentez vos taux de collecte d'avis 
 <br /><br />
 Intégrez-vous facilement à n'importe quelle solution de feedback en utilisant nos liens magiques, ou créez des campagnes de feedback en utilisant nos formulaires de feedback intégrés
           </p>
         </div>
-      </section>  )
+  </div>
+      </section> 
+       )
 }
