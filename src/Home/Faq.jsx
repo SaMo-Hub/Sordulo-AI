@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Subtitle } from "../components/Subtitle";
+import { Title } from "../components/Title";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -99,12 +100,11 @@ export const Faq = () => {
   }, []);
 
   return (
-    <section className="flex flex-col bg- items-center gap-32 px-4 md:px-24 py-12 md:py-38">
+    <section className="flex flex-col bg- items-center gap-32 px-4 md:px-24 xl:px-42 ">
       <div className="flex flex-col items-center justify-center">
 <Subtitle number={6} text={"Frequently Asked Questions"} />
-      <h2 className="font-oldschol font-bold px-4 text-[24px] leading-[90%] sm:text-[34px] md:text-[52px] lg:text-[64px] text-center">
-        Most Common <br /> Questions
-      </h2>
+      <Title  title={<>Questions les plus <br /> fréquentes</>} center={true} />
+      
       </div>
 
       <div className="sm:w-[540px] lg:w-[740px] space-y-12">

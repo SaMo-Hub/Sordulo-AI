@@ -31,3 +31,9 @@
   --spacing-smallspace-bottom : 120px;
   --spacing-smalltext-bottom : 20px
 }
+
+html 
+.custom-selection::selection {
+  background-color: var(--color-dark);
+  color: var(--color-primary);
+}
