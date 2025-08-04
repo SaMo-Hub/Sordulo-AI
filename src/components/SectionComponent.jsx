@@ -40,20 +40,19 @@ export const SectionComponent = ({ order, img, title, parapraphe, subtitle, numb
               100% { transform: translateY(0); }
             }
           `}</style>
-          <div className="relative">
-            <img className="w-auto absolute top-23 -left-12" style={{animation: 'float 3.5s ease-in-out infinite', animationDelay: '0s'}} src="/img/Home/socialManagement/appList.png" alt="" />
-            <img className="absolute bottom-22 left-35" style={{animation: 'float 3.5s ease-in-out infinite', animationDelay: '1s'}} src="/img/Home/socialManagement/Autopost.png" alt="" />
-            <img className="" style={{animation: 'float 3.5s ease-in-out infinite', animationDelay: '2s'}} src="/img/Home/socialManagement/Description.png" alt="" />
+          <div ref={imageRef} className="relative ">
+            <img className="z-10 w-auto absolute top-23 -left-12" style={{animation: 'float 3.5s ease-in-out infinite', animationDelay: '0s'}} src="/img/Home/socialManagement/appList.png" alt="" />
+            <img className="z-10 absolute bottom-22 left-35" style={{animation: 'float 3.5s ease-in-out infinite', animationDelay: '1s'}} src="/img/Home/socialManagement/Autopost.png" alt="" />
+            <img className="z-0" style={{animation: 'float 3.5s ease-in-out infinite', animationDelay: '2s'}} src="/img/Home/socialManagement/Description.png" alt="" />
           </div>
         </div>
       </div>
       <div className={`${order === 0 ? 'order-1' : 'order-1 md:order-2'} flex flex-col items-center md:items-baseline`}>
         <Subtitle number={number} text={subtitle} />
         <Title title={title} />
-        <p className='mx-22 md:mx-0 mt-4 md:mt-6 xl:text-lg text-center md:text-start'>{parapraphe}</p>
+        <p className='sm:mx-22 md:mx-0 mt-4 md:mt-6 xl:text-lg text-center md:text-start'>{parapraphe}</p>
         <Button className={'mt-4'} text={"Réserver une démo"} secondary={true} />
       </div>
     </section>
   )
 }
-{ }
