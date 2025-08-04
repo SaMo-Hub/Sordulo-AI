@@ -30,8 +30,8 @@ export const Button = ({ text, secondary, className }) => {
   const handleMouseEnter = () => {
     setIsHovered(true);
     gsap.to(boutonRef.current, {
-      y: "2px",
-      boxShadow: "0 1px 0 0 black",
+      y: "4px",
+      boxShadow: "0 2px 0 0 black",
       duration: 0.1,
       ease: "power2.out"
     });

@@ -6,7 +6,7 @@ import { Title } from "../components/Title";
 
 gsap.registerPlugin(ScrollTrigger);
 
-export const Faq = () => {
+export const Faq = ({title,subtitle,number, center}) => {
   const wrapperRefs = useRef([]);
   const titleRefs = useRef([]);
   const BackgroundRefs = useRef([]);
@@ -102,8 +102,8 @@ export const Faq = () => {
   return (
     <section className="flex flex-col bg- items-center gap-32 px-4 md:px-24 xl:px-42 ">
       <div className="flex flex-col items-center justify-center">
-<Subtitle number={6} text={"Frequently Asked Questions"} />
-      <Title  title={<>Questions les plus <br /> fréquentes</>} center={true} />
+<Subtitle number={number} text={subtitle} />
+      <Title  title={title} center={center} />
       
       </div>
 
@@ -123,7 +123,7 @@ export const Faq = () => {
               </p>
               <div
                 ref={(el) => (BackgroundRefs.current[index] = el)}
-                className="absolute origin-left  top-0 left-0 rounded-full z-0 w-0 h-full bg-black"
+                className="absolute origin-left  top-0 left-0 rounded-full z-0 w-0 h-full bg-dark"
               ></div>
             </div>
             <div className="flex justify-end origin-bottom-right items-end gap-2">
@@ -165,7 +165,7 @@ export const Faq = () => {
                   ref={(el) => (alsoAskBackgroundRefs.current[index] = el)}
                   className={`${
                     faqOpenIndex == index
-                      ? "text-white bg-black border-black border-3"
+                      ? "text-white bg-dark border-dark border-3"
                       : "border-3"
                   } absolute top-0 z-0 rounded-full opacity-0 left-0 w-full h-full`}
                 ></div>

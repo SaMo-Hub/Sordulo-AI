@@ -14,15 +14,15 @@ export const HomePage = ({  }) => {
 
       <Header/>
       
-      <SectionComponetBottomTop img={"/img/Home/bulle-texte.png"} number={2} subtitle={"Autres agences VS Nous"} title={<>Le seul outil d'IA dont <br /> vous aurez besoin.</>} parapraphe={"L'IA employé vous aide à transformer les prospects de n'importe quel canal en plus de missions, 24h/24 et 7j/7. Votre IA employé est configurée pour connaître votre entreprise et vos clients."}/>
+      <SectionComponetBottomTop part={1} img={"/img/Home/bulle-texte.png"} number={2} subtitle={"Autres agences VS Nous"} title={"Le seul outil d'IA dont <br> vous aurez besoin."} parapraphe={"L'IA employé vous aide à transformer les prospects de n'importe quel canal en plus de missions, 24h/24 et 7j/7. Votre IA employé est configurée pour connaître votre entreprise et vos clients."}/>
       <ProspectsExisant/>
       <SectionComponent order={1} img={"/img/Home/ai-talking.png"} number={4} subtitle={"Autres agences VS Nous"} title={'Ne perdez plus jamais une autre avance'} parapraphe={"L'IA employé vous aide à transformer les prospects de n'importe quel canal en plus de missions, 24h/24 et 7j/7. Votre IA employé est configurée pour connaître votre entreprise et vos clients."}/>
       <SectionComponent order={0} img={"/img/Home/socialManagement/socialMedia-img.png"} number={5} subtitle={"Autres agences VS Nous"} title={'Ne perdez plus jamais une autre avance'} parapraphe={"L'IA employé vous aide à transformer les prospects de n'importe quel canal en plus de missions, 24h/24 et 7j/7. Votre IA employé est configurée pour connaître votre entreprise et vos clients."}/>
-      <SectionComponetBottomTop img={"/img/Home/review.png"} number={6} subtitle={"Autres agences VS Nous"} title={<>Le seul outil d'IA dont <br /> vous aurez besoin.</>} parapraphe={"L'IA employé vous aide à transformer les prospects de n'importe quel canal en plus de missions, 24h/24 et 7j/7. Votre IA employé est configurée pour connaître votre entreprise et vos clients."}/>
+      <SectionComponetBottomTop img={"/img/Home/review.png"} number={6} subtitle={"Autres agences VS Nous"} title={"Obtenez plus d'avis, là <br> où ils comptent le plus"} parapraphe={"L'IA employé vous aide à transformer les prospects de n'importe quel canal en plus de missions, 24h/24 et 7j/7. Votre IA employé est configurée pour connaître votre entreprise et vos clients."}/>
 
      
       <AgenciesVsOurSolution/>
-      <Faq/>
+      <Faq title={"Questions les plus <br> fréquentes"} subtitle={"FAQ"} number={7} center={true} />
       <Footer/>
     
      

@@ -37,3 +37,37 @@ html
   background-color: var(--color-dark);
   color: var(--color-primary);
 }
+
+@keyframes float {
+              0% { transform: translateY(0); }
+              50% { transform: translateY(-10px); }
+              100% { transform: translateY(0); }
+            }
+
+@keyframes rotateFull {
+  0% { transform: rotate(-6deg); }
+  /* 0% { transform: rotate(-6deg); } */
+  50% { transform: rotate(6deg); }
+  100% { transform: rotate(-6deg); }
+}
+@keyframes rotate {
+  0% { transform: rotate(0deg); }
+  50% { transform: rotate(-6deg); }
+  100% { transform: rotate(0deg); }
+}
+
+@keyframes rotatePlus {
+  0% { transform: rotate(0deg); }
+  50% { transform: rotate(6deg); }
+  100% { transform: rotate(0deg); }
+}
+@keyframes moveRight {
+  0% { transform: translateX(0); }
+  50% { transform: translateX(10px); }
+  100% { transform: translateX(0); }
+}
+@keyframes moveLeft {
+  0% { transform: translateX(0); }
+  50% { transform: translateX(-10px); }
+  100% { transform: translateX(0); }
+}

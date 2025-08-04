@@ -18,12 +18,12 @@ export const Subtitle = ({number,text}) => {
     tl.fromTo(
       numberRef.current,
       { scale: 0 },
-      { scale: 1, opacity: 1, duration: 0.5, ease: "power2.out" }
+      { scale: 1, opacity: 1, duration: 0.7, ease: "power3.inOut" }
     ).fromTo(
       boutonRef.current,
       { x :-440},
-      { x: 0, duration: 0.5, ease: "power2.out" },
-      "0.3"
+      { x: 0, duration: 1.2, ease: "power3.inOut" },
+      ""
     );
   }, []);
 

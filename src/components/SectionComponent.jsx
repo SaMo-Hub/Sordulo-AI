@@ -33,13 +33,7 @@ export const SectionComponent = ({ order, img, title, parapraphe, subtitle, numb
       <div className={`${order === 0 ? 'order-2' : 'order-2 md:order-1'} pb-2 w-full overflow-hidden rounded-3xl`}>
         <div ref={imageBackgroundRef} className={`w-full overflow-hidden bg-primary-50 py-12 pr-25 pl-17 rounded-3xl border-4 border-dark shadow-[0_5px_0_0_black]`}>
           {/* <img className="primary " ref={imageRef}  src={img} alt={title} /> */}
-          <style>{`
-            @keyframes float {
-              0% { transform: translateY(0); }
-              50% { transform: translateY(-18px); }
-              100% { transform: translateY(0); }
-            }
-          `}</style>
+        
           <div ref={imageRef} className="relative ">
             <img className="z-10 w-auto absolute top-23 -left-12" style={{animation: 'float 3.5s ease-in-out infinite', animationDelay: '0s'}} src="/img/Home/socialManagement/appList.png" alt="" />
             <img className="z-10 absolute bottom-22 left-35" style={{animation: 'float 3.5s ease-in-out infinite', animationDelay: '1s'}} src="/img/Home/socialManagement/Autopost.png" alt="" />
