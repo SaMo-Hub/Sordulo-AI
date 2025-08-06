@@ -2,7 +2,6 @@ import React, { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 
 export const Title = ({ title, center }) => {
-  console.log(title);
   
   // Découper le titre en mots (supporte string ou tableau)
   let words = [];
@@ -13,7 +12,7 @@ export const Title = ({ title, center }) => {
   } else {
     words = [title];
   }
-
+  
   const wordsRefs = useRef([]);
   useEffect(() => {
     if (wordsRefs.current.length) {
@@ -36,25 +35,25 @@ export const Title = ({ title, center }) => {
 
 
 return (
-  <h2 className={`${center ? "text-center" : "text-center md:text-start mx-12 sm:mx-32 md:mx-0"} font-bold text-3xl sm:text-4xl md:text-5xl xl:text-5xl 2xl:text-6xl`}>
-    {words.map((word, i) => {
-      if (word === '<br>' || word === '<br/>' || word === 'br') {
-        return <br key={i} />;
-      }
-      return (
-        <span
-          key={i}
-          style={{ overflow: 'hidden', display: 'inline-block', marginRight: '0.25em' }}
-        >
+    <h2 className={`${center ? "text-center" : "text-center md:text-start mx-12 sm:mx-32 md:mx-0"} h- mb-3 md:mb-5 font-bold text-3xl sm:text-4xl md:text-5xl xl:text-5xl 2xl:text-6xl`}>
+      {words.map((word, i) => {
+        if (word === '<br>' || word === '<br/>' || word === 'br') {
+          return <br key={i} />;
+        }
+        return (
           <span
-            ref={el => (wordsRefs.current[i] = el)}
-            style={{ display: 'inline-block', willChange: 'transform, opacity' }}
+            key={i}
+            className="overflow-hidden inline-block mr-3  sm:h-10 sm:leading-10 md:h-15 md:leading-15 xl:h-17 xl:leading-15 2xl:h-17 2xl:leading-15 -mb-5    bgamber-200"
           >
-            {word}
+            <span
+              ref={el => (wordsRefs.current[i] = el)}
+              className="inline-block will-change-transform will-change-opacity"
+            >
+              {word}
+            </span>
           </span>
-        </span>
-      );
-    })}
-  </h2>
+        );
+      })}
+    </h2>
 );
 }

@@ -61,7 +61,7 @@ export const Faq = ({title,subtitle,number, center}) => {
 
       tl.fromTo(
         BackgroundRefs.current[i],
-        { width: -0, opacity: 0 },
+        { width: -0, opacity: 1 },
         { width: "100%", opacity: 1, duration: 0.6, ease: "power2.out" }
       )
         .fromTo(
@@ -88,11 +88,11 @@ export const Faq = ({title,subtitle,number, center}) => {
 
       tl.fromTo(
         alsoAskBackgroundRefs.current[i],
-        { width: -0, opacity: 0 },
+        { width: -0, opacity: 1 },
         { width: "100%", opacity: 1, duration: 0.6, ease: "power2.out" }
       ).fromTo(
         alsoAskTitlesRefs.current[i],
-        { x: -250, opacity: 0 },
+        { x: -250, opacity: 1 },
         { x: 0, duration: 0.6, opacity: 1, ease: "power2.out" },
         "<" // starts at the same time as the previous animation
       );
@@ -146,7 +146,7 @@ export const Faq = ({title,subtitle,number, center}) => {
               id={index}
               className={`space-y-4 ${
                 faqOpenIndex == index ? "max-h-[350px] " : "max-h-[54px]"
-              } overflow-hidden  transition-all duration-700`}
+              } overflow-hidden  transition-all duration-500`}
               key={index}
             >
               <div
@@ -174,7 +174,7 @@ export const Faq = ({title,subtitle,number, center}) => {
               {/* Message aligné à droite */}
               <div
                 className={`${
-                  faqOpenIndex == index ? "scale-100 delay-300" : "scale-0"
+                  faqOpenIndex == index ? "scale-100 delay-200" : "scale-0"
                 }  duration-400 transition-all origin-bottom-right flex justify-end items-end gap-2`}
               >
                 <div

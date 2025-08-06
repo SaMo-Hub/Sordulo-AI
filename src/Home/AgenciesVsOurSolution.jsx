@@ -2,7 +2,7 @@ import React from "react";
 import { Subtitle } from "../components/Subtitle";
 import { Title } from "../components/Title";
 
-export const AgenciesVsOurSolution = () => {
+export const AgenciesVsOurSolution = ({title,subtitle,number, center}) => {
   const optionList = [
 
     {
@@ -36,8 +36,8 @@ export const AgenciesVsOurSolution = () => {
     >
       <div className="flex flex-col items-center justify-center ">
 
-        <Subtitle number={6} text={"Agencies Vs Our Solution"} />
-        <Title title={<> Nous prenons soin <br /> de vos projets.</>} center={true} />
+        <Subtitle number={number} text={subtitle} />
+        <Title title={title} center={center} />
       </div>
       <div className="flex  flex-col sm:flex-row  gap-4">
         {optionList.map((item, index) => (
