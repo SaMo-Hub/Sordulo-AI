@@ -19,7 +19,8 @@ export const SectionComponent = ({ order, img, title, parapraphe, subtitle, numb
     words = [parapraphe];
   }
   const lines = typeof parapraphe === "string" ? parapraphe.split('\n') : [parapraphe];
-  const linesRefs = useRef([]);
+  const imageRefs = useRef([]);
+console.log([imageRefs]);
 
   useEffect(() => {
     const tl = gsap.timeline({
@@ -46,7 +47,27 @@ export const SectionComponent = ({ order, img, title, parapraphe, subtitle, numb
         { y: 40, opacity: 1 },
         { y: 0, opacity: 1, duration: 0.7, stagger: 0.01, ease: "power2.out" },
         "0.5"
-      );
+      )
+      imageRefs.current.forEach((img, i) => {
+      if (!img) return;
+      tl.fromTo(
+        img,
+        { x: i % 2 === 0  ? -400 : 400 },
+        { x: 0, opacity: 1, duration: 1, ease: "power2.inOut" },
+        "0.5+=" + (i * 0.08)
+      )
+      imageRefs.current.forEach((img, i) => {
+    if (!img) return;
+    gsap.to(img, {
+      y: -20,
+      yoyo: true,
+      repeat: -1,
+      duration: 2,
+      ease: "power1.inOut",
+      delay: i * 0.2
+    });
+  });;
+    });
   }, [lines.length]);
 
   return (
@@ -55,31 +76,31 @@ export const SectionComponent = ({ order, img, title, parapraphe, subtitle, numb
         {part === 1 ? (
           <div ref={imageBackgroundRef} className={`w-full  overflow-hidden bg-primary-50 px-8 py-12 rounded-3xl border-4 border-dark shadow-[0_5px_0_0_black]`}>
             {/* <img className="primary " ref={imageRef}  src={img} alt={title} /> */}
-            <div ref={imageRef} className="flex flex-col gap-12" >
-            <img src="/img/Home/textRespond/firstText.png"  alt="" />
-            <img src="/img/Home/textRespond/respond.png"  alt="" />
-            <img src="/img/Home/textRespond/appel.png"  alt="" />
+            <div  className="flex flex-col gap-12" >
+            <img ref={el => imageRefs.current[0] = el} src="/img/Home/textRespond/firstText.png"  alt="" />
+            <img ref={el => imageRefs.current[1] = el} src="/img/Home/textRespond/respond.png"  alt="" />
+            <img ref={el => imageRefs.current[2] = el} src="/img/Home/textRespond/appel.png"  alt="" />
             </div>
           </div>
         ) : part === 2 ? (
           <div ref={imageBackgroundRef} className={`w-full overflow-hidden bg-primary-50 py-12 pr-25 pl-17 rounded-3xl border-4 border-dark shadow-[0_5px_0_0_black]`}>
             {/* <img className="primary " ref={imageRef}  src={img} alt={title} /> */}
-            <div ref={imageRef} className="relative ">
-              <img className="z-10 w-auto absolute top-23 -left-12" style={{ animation: 'float 3.5s ease-in-out infinite', animationDelay: '0s' }} src="/img/Home/socialManagement/appList.png" alt="" />
-              <img className="z-10 absolute bottom-22 left-35" style={{ animation: 'float 3.5s ease-in-out infinite', animationDelay: '1s' }} src="/img/Home/socialManagement/Autopost.png" alt="" />
-              <img className="z-0" style={{ animation: 'float 3.5s ease-in-out infinite', animationDelay: '2s' }} src="/img/Home/socialManagement/Description.png" alt="" />
+            <div className="relative ">
+              <img  ref={el => imageRefs.current[0] = el} className="z-10 w-auto absolute top-23 -left-12" src="/img/Home/socialManagement/appList.png" alt="" />
+              <img  ref={el => imageRefs.current[2] = el} className="z-10 absolute bottom-22 left-35"  src="/img/Home/socialManagement/Autopost.png" alt="" />
+              <img  ref={el => imageRefs.current[1] = el} className="z-0" src="/img/Home/socialManagement/Description.png" alt="" />
             </div>
           </div>
         ) : (
           <div ref={imageBackgroundRef} className={`w-full overflow-hidden bg-primary-50 px-8 py-12 rounded-3xl border-4 border-dark shadow-[0_5px_0_0_black]`}>
             {/* <img className="primary " ref={imageRef}  src={img} alt={title} /> */}
-                        <div ref={imageRef} className="flex flex-col gap-12" >
+                        <div  className="flex flex-col gap-12" >
 
-            <img src="/img/Home/basicText/first.png" style={{ animation: 'float 3.5s ease-in-out infinite', animationDelay: '0s' }} alt="" />
-            <img src="/img/Home/basicText/second.png" style={{ animation: 'float 3.5s ease-in-out infinite', animationDelay: '1s' }} alt="" />
-            <img src="/img/Home/basicText/third.png" style={{ animation: 'float 3.5s ease-in-out infinite', animationDelay: '2s' }} alt="" />
-            <img src="/img/Home/basicText/quatre.png" style={{ animation: 'float 3.5s ease-in-out infinite', animationDelay: '3s' }} alt="" />
-            <img src="/img/Home/basicText/cinq.png" style={{ animation: 'float 3.5s ease-in-out infinite', animationDelay: '4s' }} alt="" />
+            <img ref={el => imageRefs.current[0] = el} src="/img/Home/basicText/first.png"  alt="" />
+            <img ref={el => imageRefs.current[1] = el} src="/img/Home/basicText/second.png"  alt="" />
+            <img ref={el => imageRefs.current[2] = el} src="/img/Home/basicText/third.png"  alt="" />
+            <img ref={el => imageRefs.current[3] = el} src="/img/Home/basicText/quatre.png"  alt="" />
+            <img ref={el => imageRefs.current[4] = el} src="/img/Home/basicText/cinq.png" alt="" />
           </div>
           </div>
         )

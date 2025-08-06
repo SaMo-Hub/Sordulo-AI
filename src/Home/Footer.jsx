@@ -17,35 +17,15 @@ const footerImages = [
 ];
 export const Footer = () => {
   return (
-    <footer className='bg-primary pt-42 overflow-hidden'>
-      <div className='flex relative top-6 items-end w-full'>
-        <div className='text-white flex tracking-[-0.045em] font-bold font-oldschol text-[30.2vw] '>
-          <p className='hover:translate-y-[-50px] transition-all '>
-            s
-          </p>
-          <p className='hover:translate-y-[-50px] transition-all tracking-[-0.06em] '>
-            o
-          </p>
-          <p className='hover:translate-y-[-50px] transition-all tracking-[-0.045em] '>
-            r
-          </p>
-          <p className='hover:translate-y-[-50px] transition-all tracking-[-0.08em] '>
-            d
-          </p>
-          <p className='hover:translate-y-[-50px] transition-all tracking-[-0.08em] '>
-            u
-          </p>
-          <p className='hover:translate-y-[-50px] transition-all tracking-[-0.06em] '>
-            l
-          </p>
-          <p>
-            o
-          </p>
+    <footer className='bg-primary pb-12 flex justify-end  px-12 items-center flex-col h-screen overflow-hidden'>
+
+          <img className='w-[104px] ' src="/img/Logo/logo-bordure.svg" alt="" />
+        <div className='w-full border-dark shadow-[0px_10px_0_0_#151B37] border-4 drop-shadow-2xl flex rou text-primary rounded-xl bg-secondary px-12 py-8 justify-between items-center gap-2 mt-4'>
+          <p>Dema</p>
+          <p>© Copyright Sordulo.  All rights reserved.</p>
+          <p>Dema</p>
         </div>
-        {/* {footerImages.map((img, idx) => (
-          <img className='w-[100] duration-300   hover:-translate-y-50 transition-all' src={img} alt={`footer-letter-${idx}`} key={idx} />
-        ))} */}
-      </div>
+   
     </footer>
   )
 }

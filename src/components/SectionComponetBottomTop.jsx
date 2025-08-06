@@ -103,11 +103,11 @@ export const SectionComponetBottomTop = ({ img, title, parapraphe, subtitle, num
           </div>
         </div>
       ) : (
-        <div  className={`w-full overflow-hidden bg-primary-50 py-12 pr-25 pl-17 rounded-3xl border-4 border-dark shadow-[0_5px_0_0_black]`}>
+        <div ref={imageBackgroundRef}  className={`w-full overflow-hidden bg-primary-50 py-12 pr-25 pl-17 rounded-3xl border-4 border-dark shadow-[0_5px_0_0_black]`}>
           <div ref={imageBackgroundRef} className="relative flex items-center    justify-center">
-            <img className="z-10 w-auto absolute right-0 bottom-9" style={{ animation: 'float 3.5s ease-in-out infinite', animationDelay: '0s' }} src="/img/Home/review/feedback.png" alt="" />
-            <img className="z-10 absolute bottom-0 left-0" style={{ animation: 'float 3.5s ease-in-out infinite', animationDelay: '1s' }} src="/img/Home/review/couldtobetter.png" alt="" />
-            <img className="z-0" style={{ animation: 'float 3.5s ease-in-out infinite', animationDelay: '2s' }} src="/img/Home/review/recommend.png" alt="" />
+            <img ref={el => imageRefs.current[0] = el}  className="z-10 w-auto absolute right-0 bottom-9"  src="/img/Home/review/feedback.png" alt="" />
+            <img ref={el => imageRefs.current[1] = el}  className="z-10 absolute bottom-0 left-0"  src="/img/Home/review/couldtobetter.png" alt="" />
+            <img ref={el => imageRefs.current[2] = el}  className="z-0" src="/img/Home/review/recommend.png" alt="" />
           </div>
         </div>
       )}
