@@ -22,7 +22,7 @@ export const Button = ({ text, secondary, className }) => {
     ).fromTo(
       boutonRef.current,
       { boxShadow: "0 0 0px 0px black", y: "6px" },
-      { boxShadow: "0px 5px 0px 0px black", duration: 0.5, ease: "power2.inOut", y: "0px" },
+      { boxShadow: "0px 5px 0px 0px black", duration: 0.6, ease: "back.out(2)", y: "0px" },
       "0.3"
     );
   }, []);
